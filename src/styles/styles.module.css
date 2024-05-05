@@ -561,18 +561,21 @@
         max-width: 275px;
         width: 275px;
     }
-    /* ___ layer ___ */
-    .info, .share, .timeline, .page_top, .writing, .contact, .zenn {
-        max-width: 500px;
-        margin: 0 auto;
-    }
     .flex {
         display: contents;
+    }
+    /* ___ layer ___ */
+    .timeline_list, .recent img, .recent p {
+        margin-left: 30px;
     }
 }
 @media only screen and (max-width: 400px) {
     .timeline_item {
         width: 250px;
+    }
+    /* ___ layer ___ */
+    .timeline_list, .recent img, .recent p {
+        margin-left: auto;
     }
 }
 
