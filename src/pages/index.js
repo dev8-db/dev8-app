@@ -8,6 +8,11 @@ import { useEffect, useState } from 'react';
 import { useRef } from "react";
 
 function HomePage({posts}) {
+    const [isDogImage, setIsDogImage] = useState(true);
+
+    const handleImageClick = () => {
+        setIsDogImage(!isDogImage);
+    };
 
     return (
         <div className={styles.container}>
@@ -17,13 +22,17 @@ function HomePage({posts}) {
             </Head>
 
             <section className={styles.white}>
-                <div className={styles.info}>
-                <Image src="/dog.svg" alt="" width={125} height={125}/>
+            <div className={styles.info} onClick={handleImageClick}>
+                {isDogImage ? (
+                    <Image src="/dog.svg" alt="" width={125} height={125} />
+                ) : (
+                    <Image src="/tongue.svg" alt="" width={125} height={125} />
+                )}
                 <div>
                     <h1>dev8</h1>
                     <p>開発が大好きです。Zennで記事を執筆しています。</p>
                 </div>
-                </div>
+            </div>
 
                 <Link href="https://zenn.dev/dev8/articles/dns_http_https">
                 <div className={styles.zenn}>
