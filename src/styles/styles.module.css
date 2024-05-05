@@ -561,14 +561,6 @@
         max-width: 275px;
         width: 275px;
     }
-    /* ___ footer ___ */
-    .footer img {
-        width: 60px;
-        height: 60px;
-    }
-    .footer_list {
-        font-size: 16.5px;
-    }
     /* ___ layer ___ */
     .info, .share, .timeline, .page_top, .writing, .contact, .zenn {
         max-width: 500px;
