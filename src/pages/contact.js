@@ -48,7 +48,7 @@ function Contact() {
 
             <section className={styles.blue}>
                 <div className={styles.contact}>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <div className={styles.contact_item}>
                             <label>お名前</label>
                             <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
