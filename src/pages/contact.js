@@ -51,15 +51,15 @@ function Contact() {
                     <form>
                         <div className={styles.contact_item}>
                             <label>お名前</label>
-                            <input type="text" required />
+                            <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
                         </div>
                         <div className={styles.contact_item}>
                             <label>メールアドレス</label>
-                            <input type="text" required />
+                            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
                         </div>
                         <div className={styles.contact_item_textarea}>
                             <label>内容</label>
-                            <textarea />
+                            <textarea value={message} onChange={(e) => setMessage(e.target.value)} />
                         </div>
                         <div className={styles.submit_button}><button type="submit">送信する<Image src="/envelope.png" alt="" width={100} height={100} /></button></div>
                     </form>
