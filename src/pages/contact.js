@@ -1,28 +1,35 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "../styles/styles.module.css";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { formatDateDifference } from "../js/utils";
 
 function Contact() {
-    const [name, setName] = useState('');
-    const [requirement, setRequirement] = useState('');
-    const [message, setMessage] = useState('');
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [message, setMessage] = useState("")
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        const formData = {
-            name,
-            requirement,
-            message
-        };
-
-        const mailtoLink = `mailto:dev8.db@gmail.com?subject=${encodeURIComponent(formData.requirement)}&body=${encodeURIComponent(`お名前: ${formData.name}\n\n【内容】\n${formData.message}`)}`;
-
-        window.open(mailtoLink, '_blank');
-    };
+    const handleSubmit = async(e) => {
+        e.preventDefault()
+        try{
+            const response = await fetch("https://dev8.me/api/contact-handler", {
+                method: "POST",
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    message: message
+                })
+            })
+            const jsonData = await response.json()
+            alert("メッセージを送信しました")
+        }catch(err){
+            alert("メッセージの送信に失敗しました")
+        }
+    }
 
     return (
         <div className={styles.container}>
@@ -41,21 +48,20 @@ function Contact() {
 
             <section className={styles.blue}>
                 <div className={styles.contact}>
-                    <p>入力内容に基づいてmailtoリンクが生成され、送信元アドレスとアカウント名も送信されます。知られても問題ないアカウントを使用してください。</p>
-                    <form onSubmit={handleSubmit}>
+                    <form>
                         <div className={styles.contact_item}>
                             <label>お名前</label>
-                            <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+                            <input type="text" required />
                         </div>
                         <div className={styles.contact_item}>
-                            <label>要件</label>
-                            <input type="text" value={requirement} onChange={(e) => setRequirement(e.target.value)} required />
+                            <label>メールアドレス</label>
+                            <input type="text" required />
                         </div>
                         <div className={styles.contact_item_textarea}>
                             <label>内容</label>
-                            <textarea value={message} onChange={(e) => setMessage(e.target.value)} />
+                            <textarea />
                         </div>
-                        <div className={styles.submit_button}><button type="submit">送信する<Image src="/external-link.png" alt="" width={100} height={100} /></button></div>
+                        <div className={styles.submit_button}><button type="submit">送信する<Image src="/envelope.png" alt="" width={100} height={100} /></button></div>
                     </form>
                 </div>
             </section>
