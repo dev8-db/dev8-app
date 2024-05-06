@@ -28,6 +28,7 @@ function Contact() {
             alert("メッセージを送信しました")
         }catch(err){
             alert("メッセージの送信に失敗しました")
+            console.log(error)
         }
     }
 
