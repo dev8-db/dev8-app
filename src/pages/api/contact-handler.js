@@ -6,8 +6,7 @@ export default function contactHandler(req, res){
         const { email, name, message } = req.body
 
         const transporter = nodeMailer.createTransport({
-            host: "smtp-mail.outlook.com",
-            port: 587,
+            service: "gmail",
             secure: false,
             auth: {
                 user: process.env.EMAIL_ADDRESS,
