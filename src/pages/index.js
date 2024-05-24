@@ -96,6 +96,7 @@ export default function IndexPage() {
   })
 
   const messages = [
+    "dog.svg",
     'I have significantly redesigned this website. I\'ve adopted Chakra UI for the new look.',
     'Hello World',
   ];
@@ -150,12 +151,12 @@ export default function IndexPage() {
                   </Flex>
                 </CardHeader>
                 <CardBody>
+                {message.endsWith('.svg') || message.endsWith('.jpg') || message.endsWith('.png') ? (
+                  <Image src={message} alt='' className='rounded-lg' />
+                ) : (
                   <Text>{message}</Text>
+                )}
                 </CardBody>
-                <CardFooter justify='space-between' flexWrap='wrap' sx={{ '& > button': { minW: '136px', } }}>
-                  <Button flex='1' variant='ghost' leftIcon={<BiLike />}>Like</Button>
-                  <Button flex='1' variant='ghost' leftIcon={<BiChat />}>Comments</Button>
-                </CardFooter>
               </Card>
             ))}
           </TabPanel>
