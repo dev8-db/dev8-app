@@ -81,10 +81,10 @@ export default function IndexPage() {
 
   const [copiedMessageId, setCopiedMessageId] = useState(null);
 
-  const handleShareButtonClick = (messageId) => {
-    navigator.clipboard.writeText(messageId);
-    window.location.href = `https://dev8.me#${messageId}`;
-    setCopiedMessageId(messageId);
+  const handleShareButtonClick = (message) => {
+    navigator.clipboard.writeText(message);
+    window.location.href = `https://dev8.me#${message}`;
+    setCopiedMessageId(message);
   };
 
   const CustomTab = React.forwardRef((props, ref) => {
@@ -148,7 +148,7 @@ export default function IndexPage() {
           <TabPanel>
             <Heading>Latest Notices</Heading>
             {messages.map((message, index) => (
-            <Card maxW='md' className='mt-10 ml-[5px]' key={index}>
+            <Card maxW='md' className='mt-10' key={index}>
               <CardHeader>
                 <Flex spacing='4'>
                   <Flex flex='1' gap='4' alignItems='center' flexWrap='wrap'>
@@ -168,7 +168,7 @@ export default function IndexPage() {
               </CardBody>
               <CardFooter justify='space-between' flexWrap='wrap' sx={{'& > button': {minW: '136px',},}}>
                 <Button flex='1' variant='ghost' leftIcon={<BiLike />}>Like</Button>
-                <Button flex='1' variant='ghost' leftIcon={<BiShare />} onClick={() => handleShareButtonClick(message.id)}>Share</Button>
+                <Button flex='1' variant='ghost' leftIcon={<BiShare />} onClick={() => handleShareButtonClick(message)}>Share</Button>
               </CardFooter>
             </Card>
             ))}
