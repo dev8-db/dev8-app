@@ -95,11 +95,6 @@ export default function IndexPage() {
     )
   })
 
-  const handleShareButtonClick = (message) => {
-    navigator.clipboard.writeText(message);
-    window.location.href = `https://dev8.me#${message}`;
-  };
-
   const messages = [
     'I have significantly redesigned this website. I\'ve adopted Chakra UI for the new look.',
     'Hello World',
@@ -145,7 +140,7 @@ export default function IndexPage() {
           <TabPanel>
             <Heading>Latest Notices</Heading>
             {messages.map((message, index) => (
-              <Card maxW='md' className='mt-10' key={index} id={message}>
+              <Card maxW='md' className='mt-10' key={index}>
                 <CardHeader>
                   <Flex spacing='4'>
                     <Flex flex='1' gap='4' alignItems='center' flexWrap='wrap'>
@@ -159,14 +154,7 @@ export default function IndexPage() {
                 </CardBody>
                 <CardFooter justify='space-between' flexWrap='wrap' sx={{ '& > button': { minW: '136px', } }}>
                   <Button flex='1' variant='ghost' leftIcon={<BiLike />}>Like</Button>
-                  <Button
-                    flex='1'
-                    variant='ghost'
-                    leftIcon={<BiShare />}
-                    onClick={() => handleShareButtonClick(message)}
-                  >
-                    Share
-                  </Button>
+                  <Button flex='1' variant='ghost' leftIcon={<BiChat />}>Comments</Button>
                 </CardFooter>
               </Card>
             ))}
