@@ -206,7 +206,7 @@ export default function IndexPage() {
         </TabPanels>
       </Tabs>
       <div>
-        <Divider className='mb-5' />
+        <Divider className='mt-10 mb-5' />
         <Text className='md:ml-5 ml-1 mb-5'>&copy; 2024 Develop8 Studio. All rights reserved.</Text>
       </div>
     </div>
