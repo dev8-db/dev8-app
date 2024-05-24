@@ -66,8 +66,7 @@ import {
   IconButton,
   Image
 } from "@chakra-ui/react";
-import { BsThreeDotsVertical } from "react-icons/bs";
-import { BiLike, BiChat, BiShare } from "react-icons/bi";
+import { Divider } from '@chakra-ui/react';
 
 export default function IndexPage() {
   const articles = [
@@ -96,13 +95,13 @@ export default function IndexPage() {
   })
 
   const messages = [
-    "dog.svg",
     'I have significantly redesigned this website. I\'ve adopted Chakra UI for the new look.',
     'Hello World',
+    "dog.svg",
   ];
 
   return (
-    <div>
+    <div className='grid grid-rows-auto grid-cols-1 min-h-screen'>
       <Tabs variant='enclosed'>
         <TabList>
           <CustomTab>About</CustomTab>
@@ -206,6 +205,10 @@ export default function IndexPage() {
           </TabPanel>
         </TabPanels>
       </Tabs>
+      <div>
+        <Divider className='mb-5' />
+        <Text className='md:ml-5 ml-1 mb-5'>&copy; 2024 Develop8 Studio. All rights reserved.</Text>
+      </div>
     </div>
   )
 }
