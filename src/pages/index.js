@@ -82,7 +82,7 @@ export default function IndexPage() {
 
     return (
       <Button __css={styles.tab} {...tabProps}>
-        <Box as='span' className='md:mr-[5px]'>
+        <Box as='span' className='sm:mr-[5px]'>
           {isSelected ? '😎' : '😐'}
         </Box>
         {tabProps.children}

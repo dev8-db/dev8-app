@@ -9,7 +9,7 @@ import { LinkBox, LinkOverlay } from '@chakra-ui/react';
 export default function Notices() {
     const posts = [
         {
-            dateTime: '2024-05-25T17:00:00+09:00',
+            dateTime: '2024-05-25T22:00:00+09:00',
             heading: 'Updated the site design.',
             text: 'I significantly changed the site design using Chakra UI.',
             link: "none"
