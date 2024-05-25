@@ -45,19 +45,18 @@ export default function Header() {
                 <Box
                     display={{ base: 'flex', md: 'none' }}
                     flexDirection="column"
-                    alignItems="flex-end"
-                    p={3}
+                    p={5}
                 >
-                <Link py={2} className='text-gray-700 hover:underline mb-[3px] md:mb-0' href="/">
+                <Link py={2} className='text-gray-700 py-2 px-2 hover:bg-gray-100 rounded-lg' href="/">
                     About
                 </Link>
-                <Link py={2} className='text-gray-700 hover:underline mb-[3px] md:mb-0' href="/notices">
+                <Link py={2} className='text-gray-700 py-2 px-2 hover:bg-gray-100 rounded-lg' href="/notices">
                     Notices
                 </Link>
-                <Link py={2} className='text-gray-700 hover:underline mb-[3px] md:mb-0' href="/writings">
+                <Link py={2} className='text-gray-700 py-2 px-2 hover:bg-gray-100 rounded-lg' href="/writings">
                     Writings
                 </Link>
-                <Link py={2} className='text-gray-700 hover:underline' href="/contact">
+                <Link py={2} className='text-gray-700 py-2 px-2 hover:bg-gray-100 rounded-lg' href="/contact">
                     Contact
                 </Link>
                 </Box>
