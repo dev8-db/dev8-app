@@ -67,11 +67,7 @@ import {
   Image
 } from "@chakra-ui/react";
 import { Divider } from '@chakra-ui/react';
-import { LinkBox, LinkOverlay } from '@chakra-ui/react';
-import About from "@/components/about";
-import Notices from "@/components/notices"
-import Writings from "@/components/writings";
-import Contact from "@/components/contact";
+import { LinkBox, LinkOverlay, Tag } from '@chakra-ui/react';
 
 export default function IndexPage() {
   const CustomTab = React.forwardRef((props, ref) => {
@@ -91,29 +87,50 @@ export default function IndexPage() {
   })
 
   return (
-    <div className='grid grid-rows-auto grid-cols-1 min-h-screen'>
-      <Tabs variant='enclosed'>
-        <TabList>
-          <CustomTab>About</CustomTab>
-          <CustomTab>Notices</CustomTab>
-          <CustomTab>Writings</CustomTab>
-          <CustomTab>Contact</CustomTab>
-        </TabList>
-        <TabPanels className='mt-5'>
-          {/* About me */}
-          <About />
-          {/* Latest Notices */}
-          <Notices />
-          {/* Writings */}
-          <Writings />
-          {/* Contact Us */}
-          <Contact />
-        </TabPanels>
-      </Tabs>
-      <div className='flex flex-col items-center'>
-        <Divider className='mt-10 mb-5' />
-        <Text className='mb-5'>&copy; 2024 Develop8 Studio. All rights reserved.</Text>
-      </div>
+    <div>
+                  <VStack className='mb-5'><Heading>About me</Heading></VStack>
+            <Flex justify="center" align="center">
+            <Box
+                p={8}
+                bg="white"
+                shadow="md"
+                borderWidth="1px"
+                borderRadius="md"
+                width="100%"
+                maxW="4xl"
+                mx={5}
+            >
+                <Flex direction={{ base: "column", md: "row" }} align="center" justify="center">
+                <Image
+                    borderRadius="full"
+                    boxSize={{ base: "150px", md: "200px" }}
+                    src="/dog.svg"
+                    alt="Profile Picture"
+                />
+                <VStack align="start" spacing={4} flex="1" ml={{ base: 0, md: 8 }}>
+                    <Text fontSize={{ base: "2xl", md: "3xl" }} fontWeight="bold">
+                    dev8
+                    </Text>
+                    <Text fontSize={{ base: "md", md: "lg" }} color="gray.600">
+                    <Tag className='mr-[5px] md:mb-0 mb-[5px]'>Front End Developer</Tag><Tag>Student</Tag>
+                    </Text>
+                    <Divider />
+                    <Box width="100%">
+                    <HStack justify="space-between">
+                        <Text fontSize="sm" color="gray.500">Location</Text>
+                        <Text fontSize="sm" color="gray.900">Hokkaido, Japan</Text>
+                    </HStack>
+                    <HStack justify="space-between" mt={2}>
+                        <Text fontSize="sm" color="gray.500">Twitter</Text>
+                        <Link href="https://x.com/develop8_studio" fontSize="sm" color="gray.900" isExternal>
+                        @develop8_studio
+                        </Link>
+                    </HStack>
+                    </Box>
+                </VStack>
+                </Flex>
+            </Box>
+            </Flex>
     </div>
   )
 }

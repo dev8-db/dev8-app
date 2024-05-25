@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import Head from "next/head";
 import { ChakraProvider } from '@chakra-ui/react';
+import Header from "@/components/Header";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -15,6 +16,8 @@ export default function App({ Component, pageProps }) {
         <meta name="twitter:title" content="Develop8 Studio" />
         <meta name="twitter:description" content="About me" />
       </Head>
+      <Header />
+      <div className="mb-5" />
       <Component {...pageProps} />
     </ChakraProvider>
   )

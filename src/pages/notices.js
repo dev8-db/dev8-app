@@ -56,13 +56,13 @@ export default function Notices() {
     );
 
     return (
-        <TabPanel>
+        <div>
             <VStack className='mb-5'><Heading>Latest Notices</Heading></VStack>
             <VStack spacing={5}>
             {posts.map((post, index) => (
                 <Post key={index} {...post} />
             ))}
             </VStack>
-        </TabPanel>
+        </div>
     )
 }

@@ -1,5 +1,4 @@
 import { Button } from '@chakra-ui/react';
-import { TabPanel } from '@chakra-ui/react';
 import React from 'react';
 import { Heading } from '@chakra-ui/react';
 import { VStack } from '@chakra-ui/react';
@@ -18,7 +17,7 @@ import {
 export default function Contact() {
 
     return (
-        <TabPanel>
+        <div>
             <VStack className='mb-5'><Heading>Contact Us</Heading></VStack>
             <Alert status='warning' className='rounded-lg'>
             <AlertIcon />
@@ -34,6 +33,6 @@ export default function Contact() {
             <Textarea placeholder='Enter your message' size='sm' isDisabled/>
             </FormControl>
             <Button type='submit' colorScheme='blue' className='mt-5' isDisabled>Submit</Button>
-        </TabPanel>
+        </div>
     )
 }

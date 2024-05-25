@@ -1,4 +1,3 @@
-import { TabPanel } from '@chakra-ui/react';
 import React from 'react';
 import { Heading } from '@chakra-ui/react';
 import { VStack } from '@chakra-ui/react';
@@ -24,7 +23,7 @@ export default function Writings() {
     ];
 
     return (
-        <TabPanel>
+        <div>
             <VStack className='mb-5'><Heading>Writings</Heading></VStack>
             <TableContainer>
             <Table variant='simple'>
@@ -48,6 +47,6 @@ export default function Writings() {
                 </Tbody>
             </Table>
             </TableContainer>
-        </TabPanel>
+        </div>
     )
 }
