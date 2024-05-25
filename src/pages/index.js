@@ -67,17 +67,12 @@ import {
   Image
 } from "@chakra-ui/react";
 import { Divider } from '@chakra-ui/react';
+import { LinkBox, LinkOverlay } from '@chakra-ui/react';
+import Notices from "@/components/notices"
+import Writings from "@/components/writings";
+import Contact from "@/components/contact";
 
 export default function IndexPage() {
-  const articles = [
-    { date: 'May 16', title: '【Next.js】なぜimgタグではなくnext/imageを使うのか', category: 'Tech', url: 'https://zenn.dev/dev8/articles/nextjs_image' },
-    { date: 'May 4', title: 'ドメインを入力してからページが表示されるまでの仕組み', category: 'Tech', url: 'https://zenn.dev/dev8/articles/dns_http_https' },
-    { date: 'April 23', title: 'VercelでのNext.jsデプロイ時のタグ関連エラー対処法', category: 'Tech', url: 'https://zenn.dev/dev8/articles/error_next_vercel' },
-    { date: 'April 20', title: 'JavaScriptとTypeScriptの違い', category: 'Tech', url: 'https://zenn.dev/dev8/articles/typing_js_ts' },
-    { date: 'April 20', title: 'ベクター画像とラスター画像の違い', category: 'Tech', url: 'https://zenn.dev/dev8/articles/image_magick' },
-    { date: 'April 20', title: 'Gatsby.js 入門', category: 'Tech', url: 'https://zenn.dev/dev8/articles/gatsby_tutorial' }
-  ];
-
   const CustomTab = React.forwardRef((props, ref) => {
     const tabProps = useTab({ ...props, ref })
     const isSelected = !!tabProps['aria-selected']
@@ -94,12 +89,6 @@ export default function IndexPage() {
     )
   })
 
-  const messages = [
-    'I have significantly redesigned this website. I\'ve adopted Chakra UI for the new look.',
-    'Hello World',
-    "dog.svg",
-  ];
-
   return (
     <div className='grid grid-rows-auto grid-cols-1 min-h-screen'>
       <Tabs variant='enclosed'>
@@ -112,7 +101,7 @@ export default function IndexPage() {
         <TabPanels className='mt-5'>
           {/* About me */}
           <TabPanel>
-            <Heading>About me</Heading>
+            <VStack className='mb-5'><Heading>About me</Heading></VStack>
             <Accordion allowToggle>
               <AccordionItem>
                 <h2>
@@ -137,75 +126,14 @@ export default function IndexPage() {
             </Accordion>
           </TabPanel>
           {/* Latest Notices */}
-          <TabPanel>
-            <Heading>Latest Notices</Heading>
-            {messages.map((message, index) => (
-              <Card maxW='md' className='mt-10' key={index}>
-                <CardHeader>
-                  <Flex spacing='4'>
-                    <Flex flex='1' gap='4' alignItems='center' flexWrap='wrap'>
-                      <Avatar name='Segun Adebayo' src='/dog.svg' />
-                      <Box><Heading size='sm'>dev8</Heading></Box>
-                    </Flex>
-                  </Flex>
-                </CardHeader>
-                <CardBody>
-                {message.endsWith('.svg') || message.endsWith('.jpg') || message.endsWith('.png') ? (
-                  <Image src={message} alt='' className='rounded-lg' />
-                ) : (
-                  <Text>{message}</Text>
-                )}
-                </CardBody>
-              </Card>
-            ))}
-          </TabPanel>
+          <Notices />
           {/* Writings */}
-          <TabPanel>
-            <Heading>Writings</Heading>
-            <TableContainer>
-              <Table variant='simple' className='mt-5'>
-                <Thead>
-                  <Tr>
-                    <Th>published</Th>
-                    <Th>title</Th>
-                    <Th isNumeric>type</Th>
-                  </Tr>
-                </Thead>
-                <Tbody>
-                {articles.map((article, index) => (
-                  <Tr key={index}>
-                    <Td>{article.date}</Td>
-                    <Td>
-                      <Link href={article.url}>{article.title}</Link>
-                    </Td>
-                    <Td isNumeric>{article.category}</Td>
-                  </Tr>
-                ))}
-                </Tbody>
-              </Table>
-            </TableContainer>
-          </TabPanel>
+          <Writings />
           {/* Contact Us */}
-          <TabPanel>
-            <Heading>Contact Us</Heading>
-            <Alert status='warning' className='rounded-lg mt-5'>
-              <AlertIcon />
-              The inquiry form is under construction.
-            </Alert>
-            <FormControl className='mt-5'>
-              <FormLabel>Email address</FormLabel>
-              <Input type='email' isDisabled/>
-              <FormHelperText>We'll never share your email.</FormHelperText>
-            </FormControl>
-            <FormControl className='mt-5'>
-              <FormLabel>Substance</FormLabel>
-              <Textarea placeholder='Enter your message' size='sm' isDisabled/>
-            </FormControl>
-            <Button type='submit' colorScheme='blue' className='mt-5' isDisabled>Submit</Button>
-          </TabPanel>
+          <Contact />
         </TabPanels>
       </Tabs>
-      <div>
+      <div className='flex flex-col items-center'>
         <Divider className='mt-10 mb-5' />
         <Text className='md:ml-5 ml-1 mb-5'>&copy; 2024 Develop8 Studio. All rights reserved.</Text>
       </div>
