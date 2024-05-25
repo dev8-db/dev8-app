@@ -46,14 +46,6 @@ export default function Header() {
                 display={{ base: 'flex', md: 'none' }}
                 flexDirection="column"
                 p={5}
-                position="fixed"
-                top="0"
-                right="0"
-                bg="white"
-                boxShadow="md"
-                w="full"
-                zIndex="1000"
-                marginTop="55"
             >
                 <Link py={2} className='text-gray-700 py-2 px-2 hover:bg-gray-100 rounded-lg' href="/">
                 About
