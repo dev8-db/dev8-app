@@ -17,7 +17,7 @@ import {
 export default function Contact() {
 
     return (
-        <div>
+        <div className='mr-[10px] ml-[10px] md:mr-5 md:ml-5'>
             <VStack className='mb-5'><Heading>Contact Us</Heading></VStack>
             <Alert status='warning' className='rounded-lg'>
             <AlertIcon />
