@@ -35,7 +35,7 @@ export default function Notices() {
 
     const Post = ({ dateTime, heading, text, link }) => (
         <LinkBox as='article' maxW='sm' p='5' borderWidth='1px' rounded='md' m='2'>
-            <Box as='time' dateTime={dateTime}>
+            <Box as='time' dateTime={dateTime} className='opacity-50'>
                 {timeDifference(dateTime)}
             </Box>
             {link !== "none" ? (

@@ -68,6 +68,7 @@ import {
 } from "@chakra-ui/react";
 import { Divider } from '@chakra-ui/react';
 import { LinkBox, LinkOverlay } from '@chakra-ui/react';
+import About from "@/components/about";
 import Notices from "@/components/notices"
 import Writings from "@/components/writings";
 import Contact from "@/components/contact";
@@ -100,31 +101,7 @@ export default function IndexPage() {
         </TabList>
         <TabPanels className='mt-5'>
           {/* About me */}
-          <TabPanel>
-            <VStack className='mb-5'><Heading>About me</Heading></VStack>
-            <Accordion allowToggle>
-              <AccordionItem>
-                <h2>
-                  <AccordionButton>
-                    <Box as='span' flex='1' textAlign='left'>What do you usually do?</Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-                </h2>
-                <AccordionPanel pb={4}>I am developing front-end while attending junior high school.</AccordionPanel>
-              </AccordionItem>
-              <AccordionItem>
-                <h2>
-                  <AccordionButton>
-                    <Box as='span' flex='1' textAlign='left'>What are you currently developing?</Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-                </h2>
-                <AccordionPanel pb={4}>
-                  I am developing a chat web service called "Nook.dev".
-                </AccordionPanel>
-              </AccordionItem>
-            </Accordion>
-          </TabPanel>
+          <About />
           {/* Latest Notices */}
           <Notices />
           {/* Writings */}
@@ -135,7 +112,7 @@ export default function IndexPage() {
       </Tabs>
       <div className='flex flex-col items-center'>
         <Divider className='mt-10 mb-5' />
-        <Text className='md:ml-5 ml-1 mb-5'>&copy; 2024 Develop8 Studio. All rights reserved.</Text>
+        <Text className='mb-5'>&copy; 2024 Develop8 Studio. All rights reserved.</Text>
       </div>
     </div>
   )
