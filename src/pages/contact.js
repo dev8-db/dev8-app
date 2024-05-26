@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { Button } from '@chakra-ui/react';
 import React from 'react';
 import { Heading } from '@chakra-ui/react';
@@ -15,9 +16,11 @@ import {
 } from '@chakra-ui/react';
 
 export default function Contact() {
-
     return (
         <div className='mr-[10px] ml-[10px] md:mr-5 md:ml-5'>
+            <Head>
+                <title>Contact Us -Develop8 Studio</title>
+            </Head>
             <VStack className='mb-5'><Heading>Contact Us</Heading></VStack>
             <Alert status='warning' className='rounded-lg'>
             <AlertIcon />

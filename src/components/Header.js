@@ -9,7 +9,7 @@ export default function Header() {
     return (
         <Box bg="white" px={4} py={3} boxShadow="sm" position="fixed" top={0} width="100%" zIndex="50">
         <Flex alignItems="center">
-            <Heading color="gray.900" size="md">Develop8</Heading>
+            <Heading color="gray.900" size="md"><Link href="/">Develop8</Link></Heading>
             <Spacer />
             <IconButton
                 aria-label={isOpen ? "Close menu" : "Open menu"}
@@ -27,7 +27,7 @@ export default function Header() {
                 justifyContent="flex-end"
                 mt={{ base: 5, md: 0 }}
             >
-                <Link mx={2} className='text-gray-700 hover:underline' href="/">
+                <Link mx={2} className='text-gray-700 hover:underline' href="/about">
                 About
                 </Link>
                 <Link mx={2} className='text-gray-700 ml-5 hover:underline' href="/notices">
@@ -47,16 +47,16 @@ export default function Header() {
                 flexDirection="column"
                 p={5}
             >
-                <Link py={2} className='text-gray-700 py-2 px-2 hover:bg-gray-100 rounded-lg' href="/">
+                <Link py={2} className='text-gray-700 py-2 px-3 hover:bg-gray-100 rounded-lg' href="/about">
                 About
                 </Link>
-                <Link py={2} className='text-gray-700 py-2 px-2 hover:bg-gray-100 rounded-lg' href="/notices">
+                <Link py={2} className='text-gray-700 py-2 px-3 hover:bg-gray-100 rounded-lg' href="/notices">
                 Notices
                 </Link>
-                <Link py={2} className='text-gray-700 py-2 px-2 hover:bg-gray-100 rounded-lg' href="/writings">
+                <Link py={2} className='text-gray-700 py-2 px-3 hover:bg-gray-100 rounded-lg' href="/writings">
                 Writings
                 </Link>
-                <Link py={2} className='text-gray-700 py-2 px-2 hover:bg-gray-100 rounded-lg' href="/contact">
+                <Link py={2} className='text-gray-700 py-2 px-3 hover:bg-gray-100 rounded-lg' href="/contact">
                 Contact
                 </Link>
             </Box>

@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React from 'react';
 import { Heading } from '@chakra-ui/react';
 import { VStack } from '@chakra-ui/react';
@@ -25,6 +26,9 @@ export default function Writings() {
     return (
         <div>
             <VStack className='mb-5'><Heading>Writings</Heading></VStack>
+            <Head>
+                <title>Writings -Develop8 Studio</title>
+            </Head>
             <TableContainer>
             <Table variant='simple'>
                 <Thead>
