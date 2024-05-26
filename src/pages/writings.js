@@ -25,10 +25,10 @@ export default function Writings() {
 
     return (
         <div>
-            <VStack className='mb-5'><Heading>Writings</Heading></VStack>
             <Head>
                 <title>Writings -Develop8 Studio</title>
             </Head>
+            <VStack className='mb-5'><Heading>Writings</Heading></VStack>
             <TableContainer>
             <Table variant='simple'>
                 <Thead>
