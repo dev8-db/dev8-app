@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 
 export default function App({ Component, pageProps }) {
   return (
-    <ChakraProvider>
+    <ChakraProvider className="min-h-screen grid grid-rows-auto grid-cols-1">
       <Head>
         <title>Develop8 Studio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />

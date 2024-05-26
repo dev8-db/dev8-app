@@ -2,7 +2,8 @@ import React from 'react';;
 import {
   Image, Text, VStack, Heading, Card, CardHeader, CardFooter, CardBody, Stack, Button
 } from "@chakra-ui/react";
-import { useRouter } from 'next/router';  
+import { useRouter } from 'next/router';
+import Footer from "@/components/Footer";
 
 export default function IndexPage() {
   const router = useRouter();
@@ -46,6 +47,8 @@ export default function IndexPage() {
           </Stack>
         </Card>
       </VStack>
+      <div className='mb-20' />
+      <Footer />
     </div>
   )
 }
