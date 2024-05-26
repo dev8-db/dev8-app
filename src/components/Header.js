@@ -7,7 +7,7 @@ export default function Header() {
     const { isOpen, onToggle } = useDisclosure();
 
     return (
-        <Box bg="white" px={4} py={3} boxShadow="sm">
+        <Box bg="white" px={4} py={3} boxShadow="sm" position="fixed" top={0} width="100%" zIndex="50">
         <Flex alignItems="center">
             <Heading color="gray.900" size="md">Develop8</Heading>
             <Spacer />

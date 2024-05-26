@@ -56,7 +56,7 @@ export default function Notices() {
     );
 
     return (
-        <div>
+        <div className="mr-[10px] ml-[10px] md:mr-0 md:ml-0">
             <VStack className='mb-5'><Heading>Latest Notices</Heading></VStack>
             <VStack spacing={5}>
             {posts.map((post, index) => (

@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
         <meta name="twitter:description" content="About me" />
       </Head>
       <Header />
-      <div className="mb-5" />
+      <div className="pt-[60px] md:pt-[50px] mb-5" />
       <Component {...pageProps} />
     </ChakraProvider>
   )
