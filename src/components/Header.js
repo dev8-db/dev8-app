@@ -47,16 +47,16 @@ export default function Header() {
                 flexDirection="column"
                 p={5}
             >
-                <Link py={2} className='text-gray-600 py-2 px-3 hover:bg-gray-100 rounded-lg' href="/about">
+                <Link py={2} className='text-gray-600 py-2 px-[10px] hover:bg-gray-100 rounded-lg' href="/about">
                 About
                 </Link>
-                <Link py={2} className='text-gray-600 py-2 px-3 hover:bg-gray-100 rounded-lg' href="/notices">
+                <Link py={2} className='text-gray-600 py-2 px-[10px] hover:bg-gray-100 rounded-lg' href="/notices">
                 Notices
                 </Link>
-                <Link py={2} className='text-gray-600 py-2 px-3 hover:bg-gray-100 rounded-lg' href="/writings">
+                <Link py={2} className='text-gray-600 py-2 px-[10px] hover:bg-gray-100 rounded-lg' href="/writings">
                 Writings
                 </Link>
-                <Link py={2} className='text-gray-600 py-2 px-3 hover:bg-gray-100 rounded-lg' href="/contact">
+                <Link py={2} className='text-gray-600 py-2 px-[10px] hover:bg-gray-100 rounded-lg' href="/contact">
                 Contact
                 </Link>
             </Box>
