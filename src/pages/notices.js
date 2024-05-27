@@ -34,22 +34,22 @@ export default function Notices() {
     };
 
     const Post = ({ dateTime, heading, text, link }) => (
-        <LinkBox as='article' maxW='sm' p='5' borderWidth='1px' rounded='md' m='2'>
+        <LinkBox as='article' maxW='sm' p='5' borderWidth='1px' rounded='md' m='2' boxShadow="sm">
             <Box as='time' dateTime={dateTime} className='opacity-50'>
                 {timeDifference(dateTime)}
             </Box>
             {link !== "none" ? (
-                <Heading size='md' my='2'>
+                <Heading size='md' my='2' className="text-gray-700">
                 <LinkOverlay href={link}>
                     {heading}
                 </LinkOverlay>
                 </Heading>
             ) : (
-                <Heading size='md' my='2'>
+                <Heading size='md' my='2' className="text-gray-700">
                 {heading}
                 </Heading>
             )}
-            <Text>
+            <Text className="text-gray-500">
             {text}
             </Text>
         </LinkBox>
@@ -60,7 +60,7 @@ export default function Notices() {
             <Head>
                 <title>Latest Notices -Develop8 Studio</title>
             </Head>
-            <VStack className='mb-5'><Heading>Latest Notices</Heading></VStack>
+            <VStack className='mb-5'><Heading className="text-gray-700">Latest Notices</Heading></VStack>
             <VStack spacing={5}>
             {posts.map((post, index) => (
                 <Post key={index} {...post} />

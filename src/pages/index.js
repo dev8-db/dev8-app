@@ -1,54 +1,56 @@
 import React from 'react';;
 import {
-  Image, Text, VStack, Heading, Card, CardHeader, CardFooter, CardBody, Stack, Button
+  Image, Text, VStack, Heading, Card, CardHeader, CardFooter, CardBody, Stack, Button, Highlight
 } from "@chakra-ui/react";
 import { useRouter } from 'next/router';
-import Footer from "@/components/Footer";
 
 export default function IndexPage() {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push('https://nook-dev.vercel.app/');
+    router.push('https://nook-dev.vercel.app');
   };
 
   return (
     <div>
-      <VStack className='mb-10 mr-[10px] ml-[10px] md:mr-5 md:ml-' textAlign="center">
-        <Image src="/top.png" width={500} />
-        <Text className='text-gray-500'>Combining front-end development with UI design allows you to create</Text>
-        <Text className='text-gray-500'>seamless and engaging digital experiences that are both functional and beautiful!</Text>
+      <VStack className='mr-[10px] ml-[10px] md:mr-0 md:ml-0' textAlign="center">
+        <Heading>🐱🍡🐶</Heading>
       </VStack>
-      <VStack className='mr-[10px] ml-[10px] md:mr-5 md:ml-' textAlign="center">
-        <Heading className='mb-5'>Goods</Heading>
+      <VStack className='mb-10 mr-[10px] ml-[10px] md:mr-0 md:ml-0'>
+        <Heading lineHeight="tall" className='text-gray-700 w-[90%] md:w-[750px]'>Front-end And UI Design</Heading>
+        <Text className='text-gray-500 w-[90%] md:w-[750px]'>Front-end and UI design merge creativity with technology, transforming ideas into interactive, user-friendly experiences. It's a field of endless innovation and immediate, visible results!</Text>
+      </VStack>
+      <VStack className='mb-10 mr-[10px] ml-[10px] md:mr-5 md:ml-' textAlign="right">
+        <Heading lineHeight="tall" className='text-gray-700 w-[90%] md:w-[750px]'>Goods</Heading>
+        <Text className='text-gray-500 w-[90%] md:w-[750px]'>The project I am currently focusing on:</Text>
+      </VStack>
+      <VStack className='mr-[10px] ml-[10px] md:mr-0 md:ml-0' textAlign="left">
         <Card
           direction={{ base: 'column', sm: 'row' }}
           overflow='hidden'
           variant='outline'
+          height={{ base: 'auto', sm: '175px' }}
         >
           <Image
             objectFit='cover'
-            maxW={{ base: '100%', sm: '200px' }}
-            src="/trip.svg"
+            maxW={{ base: '100%', sm: '175px' }}
+            src="/goods/nook.png"
             padding="5"
+            className='h-60 md:h-[100%]'
           />
           <Stack>
             <CardBody>
-              <Heading size='md'>Nook.dev</Heading>
-              <Text py='2'>
-                Byte-sized Chats, Mega-sized Ideas! Real time chat app!
+              <Heading size='md' className='text-gray-700'>Nook.dev</Heading>
+              <Text py='2' className='text-gray-500 w-[90%] md:w-[750px]'>
+                I&apos;m working on a real-time chat app with the theme &apos;Byte-sized Chats, Mega-sized Ideas!&apos; My aim? To make chatting smooth and fun! Right now, I&apos;ve added image sharing and stickers! 🚀
               </Text>
-            </CardBody>
-            <CardFooter>
-              <Button variant='solid' colorScheme='blue' onClick={handleClick}>
+              <Button variant='solid' colorScheme='green' onClick={handleClick} marginTop="5px">
                 Try to use
               </Button>
-            </CardFooter>
+            </CardBody>
           </Stack>
         </Card>
       </VStack>
-      <div className='mb-20' />
-      <Footer />
     </div>
   )
 }

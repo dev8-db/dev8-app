@@ -28,7 +28,7 @@ export default function Writings() {
             <Head>
                 <title>Writings -Develop8 Studio</title>
             </Head>
-            <VStack className='mb-5'><Heading>Writings</Heading></VStack>
+            <VStack className='mb-5'><Heading className="text-gray-700">Writings</Heading></VStack>
             <TableContainer>
             <Table variant='simple'>
                 <Thead>
@@ -41,11 +41,9 @@ export default function Writings() {
                 <Tbody>
                 {articles.map((article, index) => (
                 <Tr key={index}>
-                    <Td>{article.date}</Td>
-                    <Td>
-                    <Link href={article.url}>{article.title}</Link>
-                    </Td>
-                    <Td isNumeric>{article.category}</Td>
+                    <Td className="text-gray-500">{article.date}</Td>
+                    <Td><Link href={article.url}>{article.title}</Link></Td>
+                    <Td isNumeric className="text-gray-500">{article.category}</Td>
                 </Tr>
                 ))}
                 </Tbody>

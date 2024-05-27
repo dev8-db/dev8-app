@@ -18,7 +18,7 @@ export default function About() {
       <Head>
         <title>About me -Develop8 Studio</title>
       </Head>
-      <VStack className='mb-5'><Heading>About me</Heading></VStack>
+      <VStack className='mb-5'><Heading className="text-gray-700">About me</Heading></VStack>
       <Flex justify="center" align="center">
         <Box
           p={8}
