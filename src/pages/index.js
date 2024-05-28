@@ -11,7 +11,7 @@ export default function IndexPage() {
       <VStack>
         <Flex
           bgGradient="linear(to-r, orange.400, pink.400)"
-          className='rounded-lg my-5 w-[90%] md:w-[75%] h-[200px] items-center justify-center'
+          className='rounded-lg mb-5 w-[90%] md:w-[75%] h-[125px] md:h-[200px] items-center justify-center'
         />
       </VStack>
       <VStack className='mr-[10px] ml-[10px] md:mr-0 md:ml-0' textAlign="center">
