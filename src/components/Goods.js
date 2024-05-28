@@ -15,7 +15,7 @@ export default function Goods() {
             overflow="hidden"
             variant='outline'
             height="auto"
-            className="w-fit-content mx-[10px]"
+            className="w-fit-content md:w-[75%] mx-[10px]"
             >
             <Image
                 objectFit='cover'

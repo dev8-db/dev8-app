@@ -9,16 +9,16 @@ export default function Footer() {
                 <Link href="/"><Image src="/develop8-studio.png" alt="Develop8" width="100px" /></Link>
                 <Text className="text-sm text-gray-600">&copy; 2024 Develop8 Studio. All rights reserved.</Text>
             </VStack>
-            <Stack direction="row" spacing={[5, 5, 10]} align="flex-start" className="flex-col md:flex-row">
+            <Stack direction="row" spacing={[2.5, 5, 10]} align="flex-start" className="flex-col md:flex-row">
                 <VStack align={["flex-start"]}>
-                    <Link href="/about" className="text-gray-500 hover:underline">About</Link>
-                    <Link href="/writings" className="text-gray-500 hover:underline">Writings</Link>
-                    <Link href="/contact" className="text-gray-500 hover:underline">Contact</Link>
+                    <Link href="/about" className="text-gray-500 hover:underline"><Text>About</Text></Link>
+                    <Link href="/writings" className="text-gray-500 hover:underline"><Text>Writings</Text></Link>
+                    <Link href="/contact" className="text-gray-500 hover:underline"><Text>Contact</Text></Link>
                 </VStack>
                 <VStack align="flex-start">
-                    <Link href="/" className="text-gray-500 hover:underline">Privacy Policy</Link>
-                    <Link href="/" className="text-gray-500 hover:underline">Terms of Service</Link>
-                    <Link href="/" className="text-gray-500 hover:underline">Support</Link>
+                    <Link href="/" className="text-gray-500 hover:underline"><Text>Privacy Policy</Text></Link>
+                    <Link href="/" className="text-gray-500 hover:underline"><Text>Terms of Service</Text></Link>
+                    <Link href="/" className="text-gray-500 hover:underline"><Text>Support</Text></Link>
                 </VStack>
             </Stack>
         </Flex>
