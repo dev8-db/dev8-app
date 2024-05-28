@@ -1,6 +1,6 @@
 import React from 'react';;
 import {
-  Image, Text, VStack, Heading, Card, CardHeader, CardFooter, CardBody, Stack, Button, Highlight
+  Image, Text, VStack, Heading, Card, CardHeader, CardFooter, CardBody, Stack, Button, Highlight, Flex
 } from "@chakra-ui/react";
 import Goods from "@/components/Goods";
 import Footer from "@/components/Footer";
@@ -8,6 +8,12 @@ import Footer from "@/components/Footer";
 export default function IndexPage() {
   return (
     <div>
+      <VStack>
+        <Flex
+          bgGradient="linear(to-r, orange.400, pink.400)"
+          className='rounded-lg my-5 w-[90%] md:w-[75%] h-[200px] items-center justify-center'
+        />
+      </VStack>
       <VStack className='mr-[10px] ml-[10px] md:mr-0 md:ml-0' textAlign="center">
         <Heading>🐱🍡🐶</Heading>
       </VStack>

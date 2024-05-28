@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <Box bg="gray.100" className="py-5 px-5 md:mt-0 mt-[75px]">
+        <Box bg="gray.100" className="py-5 px-5 mt-[75px]">
         <Flex className="w-[90%] md:max-w-[1200px] mx-auto flex justify-between items-center flex-col md:flex-row text-center md:text-left">
             <VStack spacing={2.5} align={["center", "center", "flex-start"]} className="mb-5 md:mb-0">
                 <Link href="/"><Image src="/develop8-studio.png" alt="Develop8" width="100px" /></Link>
