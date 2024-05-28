@@ -33,7 +33,7 @@ export default function NoticesList() {
     };
 
     const Post = ({ dateTime, heading, text, link }) => (
-        <LinkBox as='article' maxW='sm' p='5' borderWidth='1px' rounded='md' m='2' boxShadow="sm">
+        <LinkBox as='article' p='5' borderWidth='1px' rounded='md' m='2' boxShadow="sm" className="w-xl xl:w-xl lg:w-lg md:w-md sm:w-sm">
             <Box as='time' dateTime={dateTime} className='opacity-50'>
                 {timeDifference(dateTime)}
             </Box>
