@@ -14,7 +14,7 @@ export default function Goods() {
             direction={{ base: 'column', sm: 'row' }}
             overflow='hidden'
             variant='outline'
-            height={{ base: 'auto', sm: '175px' }}
+            height="auto"
             >
             <Image
                 objectFit='cover'

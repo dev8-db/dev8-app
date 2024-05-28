@@ -3,6 +3,7 @@ import {
   Image, Text, VStack, Heading, Card, CardHeader, CardFooter, CardBody, Stack, Button, Highlight
 } from "@chakra-ui/react";
 import Goods from "@/components/Goods";
+import Footer from "@/components/Footer";
 
 export default function IndexPage() {
   return (

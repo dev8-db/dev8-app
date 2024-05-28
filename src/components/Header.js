@@ -1,6 +1,6 @@
 import React from 'react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import { Box, Flex, Heading, IconButton, Spacer, useDisclosure } from '@chakra-ui/react';
+import { Box, Flex, Heading, IconButton, Spacer, useDisclosure, Image } from '@chakra-ui/react';
 import Link from "next/link";
 
 export default function Header() {
@@ -9,7 +9,7 @@ export default function Header() {
     return (
         <Box bg="white" px={4} py={3} boxShadow="sm" position="fixed" top={0} width="100%" zIndex="50">
         <Flex alignItems="center">
-            <Heading color="gray.900" size="md"><Link href="/" className='text-gray-700'>Develop8</Link></Heading>
+            <Link href="/" className='text-gray-700'><Image src="/develop8-studio.png" width="100px" /></Link>
             <Spacer />
             <IconButton
                 aria-label={isOpen ? "Close menu" : "Open menu"}
