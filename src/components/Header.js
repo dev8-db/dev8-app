@@ -9,7 +9,8 @@ export default function Header() {
     return (
         <Box px={4} py={3} boxShadow="sm" zIndex="50" className='fixed w-[100%] top-0 bg-white md:bg-opacity-50 backdrop-blur-lg'>
         <Flex alignItems="center">
-            <Link href="/" className='text-gray-700'><Image src="/develop8-studio.png" width="100px" /></Link>
+            {/* <Link href="/" className='text-gray-700'><Image src="/develop8-studio.png" width="100px" /></Link> */}
+            <Heading fontSize="2xl"><Link href="/" className='text-gray-700'>🐱🍡🐶</Link></Heading>
             <Spacer />
             <IconButton
                 aria-label={isOpen ? "Close menu" : "Open menu"}
@@ -27,16 +28,16 @@ export default function Header() {
                 justifyContent="flex-end"
                 mt={{ base: 5, md: 0 }}
             >
-                <Link mx={2} className='text-gray-600' href="/about">
+                <Link mx={2} className='text-gray-600 font-medium' href="/about">
                 About
                 </Link>
-                <Link mx={2} className='text-gray-600 ml-5' href="/notices">
+                <Link mx={2} className='text-gray-600 ml-5 font-medium' href="/notices">
                 Notices
                 </Link>
-                <Link mx={2} className='text-gray-600 ml-5' href="/writings">
+                <Link mx={2} className='text-gray-600 ml-5 font-medium' href="/writings">
                 Writings
                 </Link>
-                <Link mx={2} className='text-gray-600 ml-5' href="/contact">
+                <Link mx={2} className='text-gray-600 ml-5 font-medium' href="/contact">
                 Contact
                 </Link>
             </Flex>
