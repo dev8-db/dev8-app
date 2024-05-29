@@ -1,13 +1,13 @@
 import React from 'react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import { Box, Flex, Heading, IconButton, Spacer, useDisclosure, Image } from '@chakra-ui/react';
+import { Box, Flex, Heading, IconButton, Spacer, useDisclosure, Image, Text, VStack } from '@chakra-ui/react';
 import Link from "next/link";
 
 export default function Header() {
     const { isOpen, onToggle } = useDisclosure();
 
     return (
-        <Box bg="white" px={4} py={3} boxShadow="sm" position="fixed" top={0} width="100%" zIndex="50">
+        <Box px={4} py={3} boxShadow="sm" zIndex="50" className='fixed w-[100%] top-0 bg-white md:bg-opacity-50 backdrop-blur-lg'>
         <Flex alignItems="center">
             <Link href="/" className='text-gray-700'><Image src="/develop8-studio.png" width="100px" /></Link>
             <Spacer />
@@ -27,16 +27,16 @@ export default function Header() {
                 justifyContent="flex-end"
                 mt={{ base: 5, md: 0 }}
             >
-                <Link mx={2} className='text-gray-600 hover:underline' href="/about">
+                <Link mx={2} className='text-gray-600' href="/about">
                 About
                 </Link>
-                <Link mx={2} className='text-gray-600 ml-5 hover:underline' href="/notices">
+                <Link mx={2} className='text-gray-600 ml-5' href="/notices">
                 Notices
                 </Link>
-                <Link mx={2} className='text-gray-600 ml-5 hover:underline' href="/writings">
+                <Link mx={2} className='text-gray-600 ml-5' href="/writings">
                 Writings
                 </Link>
-                <Link mx={2} className='text-gray-600 ml-5 hover:underline' href="/contact">
+                <Link mx={2} className='text-gray-600 ml-5' href="/contact">
                 Contact
                 </Link>
             </Flex>
@@ -47,16 +47,16 @@ export default function Header() {
                 flexDirection="column"
                 p={5}
             >
-                <Link py={2} className='text-gray-600 py-2 px-3 hover:bg-gray-100 rounded-lg' href="/about">
+                <Link py={2} className='text-gray-600 py-[10px] px-[15px] hover:bg-gray-100 rounded-lg' href="/about">
                 About
                 </Link>
-                <Link py={2} className='text-gray-600 py-2 px-3 hover:bg-gray-100 rounded-lg' href="/notices">
+                <Link py={2} className='text-gray-600 py-[10px] px-[15px] hover:bg-gray-100 rounded-lg' href="/notices">
                 Notices
                 </Link>
-                <Link py={2} className='text-gray-600 py-2 px-3 hover:bg-gray-100 rounded-lg' href="/writings">
+                <Link py={2} className='text-gray-600 py-[10px] px-[15px] hover:bg-gray-100 rounded-lg' href="/writings">
                 Writings
                 </Link>
-                <Link py={2} className='text-gray-600 py-2 px-3 hover:bg-gray-100 rounded-lg' href="/contact">
+                <Link py={2} className='text-gray-600 py-[10px] px-[15px] hover:bg-gray-100 rounded-lg' href="/contact">
                 Contact
                 </Link>
             </Box>
