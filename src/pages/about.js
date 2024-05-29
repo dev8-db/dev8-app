@@ -1,16 +1,26 @@
 import Head from "next/head";
-import { Box } from '@chakra-ui/react';
 import React from 'react';
-import { Heading } from '@chakra-ui/react';
-import { VStack } from '@chakra-ui/react';
-import { Text } from '@chakra-ui/react';
-import { Link } from '@chakra-ui/react';
 import {
   Flex,
-  Image
+  Image,
+  Table,
+  Thead,
+  Tbody,
+  Tr,
+  Th,
+  Td,
+  TableContainer,
+  Divider,
+  Tag,
+  HStack,
+  Text,
+  VStack,
+  Heading,
+  Box,
+  Link,
+  TableCaption,
+  Tfoot
 } from "@chakra-ui/react";
-import { Divider } from '@chakra-ui/react';
-import { Tag, HStack } from '@chakra-ui/react';
 
 export default function About() {
   return (
@@ -18,6 +28,20 @@ export default function About() {
       <Head>
         <title>About me -Develop8 Studio</title>
       </Head>
+      <TableContainer>
+        <Table variant='simple'>
+          <Tbody>
+          <Tr>
+              <Td>Name</Td>
+              <Td>Develop8</Td>
+            </Tr>
+            <Tr>
+              <Td>詳細</Td>
+              <Td>中学生, 北海道在住</Td>
+            </Tr>
+          </Tbody>
+        </Table>
+      </TableContainer>
       <VStack className='mb-5'><Heading className="text-gray-700">About me</Heading></VStack>
       <Flex justify="center" align="center">
         <Box

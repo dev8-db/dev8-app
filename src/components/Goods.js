@@ -1,4 +1,4 @@
-import { VStack, Card, Stack, CardBody, Heading, Text, Button, Image } from "@chakra-ui/react";
+import { VStack, Card, Stack, CardBody, Heading, Text, Button, Image, CardFooter } from "@chakra-ui/react";
 import { useRouter } from 'next/router';
 
 export default function Goods() {
@@ -9,32 +9,26 @@ export default function Goods() {
     };
 
     return (
-        <VStack className='mr-[10px] ml-[10px] md:mr-0 md:ml-0' textAlign="left" spacing={5}>
+        <VStack textAlign="left" spacing={5}>
         <Card
             direction={{ base: 'column', md: 'row' }}
-            overflow="hidden"
             variant='outline'
-            height="auto"
-            className="w-fit-content md:w-[75%] mx-[10px]"
+            shadow="sm"
+            className="w-[90%] md:w-[75%] overflow-hidden"
             >
             <Image
                 objectFit='cover'
-                maxW={{ base: '100%', md: '175px' }}
                 src="/goods/nook.png"
-                className='h-60 md:h-[100%]'
+                className='md:w-[30%] lg:w-[20%]'
             />
-            <Stack>
-                <CardBody>
+            <CardBody>
                 <Heading size='md' className='text-gray-700'>Nook.dev</Heading>
-                <Text py='2' className='text-gray-500 w-fit-content'>
-                    I&apos;m working on a real-time chat app with the theme &apos;Byte-sized Chats, Mega-sized Ideas!&apos; My aim? To make chatting smooth and fun! Right now, I&apos;ve added image sharing and stickers! 🚀
+                <Text className='text-gray-500 w-fit-content py-2.5'>
+                        I&apos;m working on a real-time chat app with the theme &apos;Byte-sized Chats, Mega-sized Ideas!&apos; My aim? To make chatting smooth and fun! Right now, I&apos;ve added image sharing and stickers! 🚀
                 </Text>
-                <Button variant='solid' colorScheme='green' onClick={handleClick} marginTop="5px">
-                    Try to use
-                </Button>
-                </CardBody>
-            </Stack>
-            </Card>
+                <Button variant='solid' colorScheme='green' onClick={handleClick} className="mt-5">Try to use</Button>
+            </CardBody>
+        </Card>
         </VStack>
     )
 }
