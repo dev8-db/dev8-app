@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import { Box, Flex, Heading, IconButton, Spacer, useDisclosure, Image, Text, VStack } from '@chakra-ui/react';
+import { Box, Flex, Heading, IconButton, Spacer, useDisclosure, Image, Text, VStack, useBreakpointValue } from '@chakra-ui/react';
 import Link from "next/link";
 
 export default function Header() {
     const { isOpen, onToggle } = useDisclosure();
     const [showHeader, setShowHeader] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
+    const isMobile = useBreakpointValue({ base: true, md: false });
 
     useEffect(() => {
+        if (isMobile) return;
+
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
             if (currentScrollY > lastScrollY) {
@@ -24,7 +27,7 @@ export default function Header() {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, [lastScrollY]);
+    }, [lastScrollY, isMobile]);
 
     return (
         <Box px={4} py={3} boxShadow="sm" zIndex="50"             className={`fixed w-[100%] top-0 bg-white md:bg-opacity-50 backdrop-blur-lg transition-transform duration-300 ${showHeader ? 'transform translate-y-0' : 'transform -translate-y-full'}`}>
