@@ -30,7 +30,7 @@ export default function Header() {
     }, [lastScrollY, isMobile]);
 
     return (
-        <Box px={4} py={3} boxShadow="sm" zIndex="50" className={`fixed w-[100%] top-0 bg-white md:bg-opacity-50 backdrop-blur-lg transition-transform duration-300 ${showHeader ? 'transform translate-y-0' : 'transform -translate-y-full'}`}>
+        <Box px={5} py={3} boxShadow="sm" zIndex="50" className={`fixed w-[100%] top-0 bg-white md:bg-opacity-50 backdrop-blur-lg transition-transform duration-300 ${showHeader ? 'transform translate-y-0' : 'transform -translate-y-full'}`}>
         <Flex alignItems="center">
             {/* <Link href="/" className='fixed ml-5'><Image src="/cheese.png" width="75px" /></Link> */}
             <Heading letterSpacing="5" fontSize={{base: "2xl", md:"xl"}}><Link href="/">🐱🍡🐶</Link></Heading>
@@ -51,16 +51,16 @@ export default function Header() {
                 justifyContent="flex-end"
                 mt={{ base: 5, md: 0 }}
             >
-                <Link mx={2} className='text-gray-600 font-medium' href="/about">
+                <Link mx={2} className='text-gray-600' href="/about">
                 About
                 </Link>
-                <Link mx={2} className='text-gray-600 ml-5 font-medium' href="/notices">
+                <Link mx={2} className='text-gray-600 ml-5' href="/notices">
                 Notices
                 </Link>
-                <Link mx={2} className='text-gray-600 ml-5 font-medium' href="/writings">
+                <Link mx={2} className='text-gray-600 ml-5' href="/writings">
                 Writings
                 </Link>
-                <Link mx={2} className='text-gray-600 ml-5 font-medium' href="/contact">
+                <Link mx={2} className='text-gray-600 ml-5' href="/contact">
                 Contact
                 </Link>
             </Flex>
