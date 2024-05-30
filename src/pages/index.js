@@ -1,6 +1,6 @@
-import React from 'react';;
+import React from 'react';
 import {
-  Image, Text, VStack, Heading, Card, CardHeader, CardFooter, CardBody, Stack, Button, Highlight, Flex, HStack
+  Image, Text, VStack, Heading, Card, CardHeader, CardFooter, CardBody, Stack, Button, Highlight, Flex, HStack, Box, Icon
 } from "@chakra-ui/react";
 import Articles from "@/components/Articles";
 import Goods from "@/components/Goods";

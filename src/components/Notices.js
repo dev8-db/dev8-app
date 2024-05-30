@@ -9,8 +9,8 @@ export default function NoticesList() {
     const posts = [
         {
             dateTime: '2024-05-28T00:00:00+09:00',
-            heading: 'Updated the site design.',
-            text: 'I significantly changed the site design using Chakra UI.',
+            heading: 'サイトのデザインを更新しました。',
+            text: 'Chakra UIを使用して、サイトのデザインを大幅に変更しました。',
             link: "none"
         },
     ];

@@ -23,17 +23,17 @@ export default function Contact() {
             </Head>
             <VStack className='mb-5'><Heading className="text-gray-700">Contact Us</Heading></VStack>
             <Alert status='warning' className='rounded-lg'>
-            <AlertIcon />
-            The inquiry form is under construction.
+                <AlertIcon />
+                お問い合わせフォームは現在準備中です。
             </Alert>
             <FormControl className='mt-5'>
             <FormLabel textColor="gray.700">Email address</FormLabel>
             <Input type='email' isDisabled/>
-            <FormHelperText>We'll never share your email.</FormHelperText>
+            <FormHelperText>私はあなたのメールアドレスを決して共有しません。</FormHelperText>
             </FormControl>
             <FormControl className='mt-5'>
             <FormLabel textColor="gray.700">Substance</FormLabel>
-            <Textarea placeholder='Enter your message' size='sm' isDisabled/>
+            <Textarea placeholder='メッセージを入力' size='sm' isDisabled/>
             </FormControl>
             <Button type='submit' colorScheme='blue' className='mt-5' isDisabled>Submit</Button>
         </div>
