@@ -10,25 +10,34 @@ export default function Goods() {
 
     return (
         <VStack textAlign="left" spacing={5}>
-        <Card
-            direction={{ base: 'column', md: 'row' }}
-            variant='outline'
-            shadow="sm"
-            className="w-[90%] md:w-[75%] overflow-hidden"
-            >
-            <Image
-                objectFit='cover'
-                src="/goods/nook.png"
-                className='md:w-[30%] lg:w-[20%]'
-            />
-            <CardBody>
-                <Heading size='md' className='text-gray-700'>Nook.dev</Heading>
-                <Text className='text-gray-500 w-fit-content py-2.5'>
-                        I&apos;m working on a real-time chat app with the theme &apos;Byte-sized Chats, Mega-sized Ideas!&apos; My aim? To make chatting smooth and fun! Right now, I&apos;ve added image sharing and stickers! 🚀
-                </Text>
-                <Button variant='solid' colorScheme='green' onClick={handleClick} className="mt-5">Try to use</Button>
-            </CardBody>
-        </Card>
+            <Card
+                direction={{ base: 'column', sm: 'row' }}
+                overflow='hidden'
+                variant='outline'
+                className="w-[90%] md:w-[75%]"
+                >
+                <Image
+                    objectFit='cover'
+                    maxW={{ base: '100%', sm: '200px' }}
+                    src='/goods/odan-chat.jpg'
+                    alt='Caffe Latte'
+                />
+                <Stack>
+                    <CardBody>
+                    <Heading size='md'>Nook.dev</Heading>
+
+                    <Text py='2' className="text-gray-500">
+                    "Byte-sized Chats, Mega-sized Ideas!"というテーマでリアルタイムチャットアプリを開発しています！私の目標は、チャットをスムーズで楽しくすることです！現在、画像の共有とステッカー機能を追加しました！🚀
+                    </Text>
+                    </CardBody>
+
+                    <CardFooter>
+                    <Button variant='solid' colorScheme='green' onClick={handleClick}>
+                        Try to use
+                    </Button>
+                    </CardFooter>
+                </Stack>
+            </Card>
         </VStack>
     )
 }
