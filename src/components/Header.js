@@ -29,38 +29,9 @@ export default function Header() {
         };
     }, [lastScrollY, isMobile]);
 
-    const headerStyles = {
-        base: {
-            position: 'fixed',
-            width: '100%',
-            top: 0,
-            bg: 'white',
-            transition: 'transform 0.3s',
-            zIndex: 50,
-            transform: showHeader ? 'translateY(0)' : 'translateY(-100%)',
-        },
-        supported: {
-            backdropFilter: 'blur(10px)',
-            bg: 'rgba(255, 255, 255, 0.5)',
-        },
-        fallback: {
-            bg: 'rgba(255, 255, 255, 0.8)',
-        },
-    };
-
     return (
         <Box
-        sx={{
-            ...headerStyles.base,
-            ...(isMobile
-                ? {}
-                : {
-                    '@supports (backdrop-filter: blur(10px)) and (min-width: 48em)': headerStyles.supported,
-                    '@supports not (backdrop-filter: blur(10px))': headerStyles.fallback,
-                }),
-        }}
-            px={5} py={3}
-            boxShadow="sm" zIndex="50"
+            px={5} py={3} boxShadow="sm" zIndex="50" className={`fixed w-full top-0 bg-white md:bg-opacity-50 backdrop-blur-lg transition-transform duration-300 ${showHeader ? 'transform translate-y-0' : 'transform -translate-y-full'} ${isMobile ? 'md:transform-none' : ''}`}
         >
             <Flex alignItems="center">
                 <Heading letterSpacing="5" fontSize={{ base: '2xl', md: 'xl' }}>
