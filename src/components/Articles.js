@@ -32,7 +32,7 @@ export default function Articles() {
                 direction="column"
                 variant='outline'
                 shadow="sm"
-                className="w-[100%] md:w-[33.3%] overflow-hidden"
+                className="w-[100%] md:w-[1/4] overflow-hidden"
             >
                 <CardBody>
                 <Heading size='md' className='text-gray-700'>{article.title}</Heading>
