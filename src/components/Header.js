@@ -1,16 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { Box, Flex, Heading, IconButton, Spacer, useDisclosure, Image, Text, VStack } from '@chakra-ui/react';
 import Link from "next/link";
 
 export default function Header() {
     const { isOpen, onToggle } = useDisclosure();
+    const [showHeader, setShowHeader] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            if (currentScrollY > lastScrollY) {
+                setShowHeader(false);
+            } else {
+                setShowHeader(true);
+            }
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [lastScrollY]);
 
     return (
-        <Box px={4} py={3} boxShadow="sm" zIndex="50" className='fixed w-[100%] top-0 bg-white md:bg-opacity-50 backdrop-blur-lg'>
+        <Box px={4} py={3} boxShadow="sm" zIndex="50"             className={`fixed w-[100%] top-0 bg-white md:bg-opacity-50 backdrop-blur-lg transition-transform duration-300 ${showHeader ? 'transform translate-y-0' : 'transform -translate-y-full'}`}>
         <Flex alignItems="center">
-            {/* <Link href="/" className='text-gray-700'><Image src="/develop8-studio.png" width="100px" /></Link> */}
-            <Heading fontSize="2xl"><Link href="/" className='text-gray-700'>🐱🍡🐶</Link></Heading>
+            <Link href="/" className='fixed ml-5'><Image src="/cheese.png" width="75px" /></Link>
             <Spacer />
             <IconButton
                 aria-label={isOpen ? "Close menu" : "Open menu"}
