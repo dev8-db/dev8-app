@@ -30,9 +30,10 @@ export default function Header() {
     }, [lastScrollY, isMobile]);
 
     return (
-        <Box px={4} py={3} boxShadow="sm" zIndex="50"             className={`fixed w-[100%] top-0 bg-white md:bg-opacity-50 backdrop-blur-lg transition-transform duration-300 ${showHeader ? 'transform translate-y-0' : 'transform -translate-y-full'}`}>
+        <Box px={4} py={3} boxShadow="sm" zIndex="50" className={`fixed w-[100%] top-0 bg-white md:bg-opacity-50 backdrop-blur-lg transition-transform duration-300 ${showHeader ? 'transform translate-y-0' : 'transform -translate-y-full'}`}>
         <Flex alignItems="center">
-            <Link href="/" className='fixed ml-5'><Image src="/cheese.png" width="75px" /></Link>
+            {/* <Link href="/" className='fixed ml-5'><Image src="/cheese.png" width="75px" /></Link> */}
+            <Heading letterSpacing="5" fontSize={{base: "2xl", md:"xl"}}><Link href="/">🐱🍡🐶</Link></Heading>
             <Spacer />
             <IconButton
                 aria-label={isOpen ? "Close menu" : "Open menu"}
