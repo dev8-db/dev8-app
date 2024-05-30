@@ -23,7 +23,7 @@ export default function IndexPage() {
       </VStack>
       <VStack className='mb-10' textAlign="right">
         <Heading lineHeight="tall" className='text-gray-700 w-[90%] md:w-[75%]'>Goods</Heading>
-        <Text className='text-gray-500 w-[90%] md:w-[75%]'>現在取り組んでいるプロジェクト:</Text>
+        <Text className='text-gray-500 w-[90%] md:w-[75%]'>現在取り組んでいるプロジェクト</Text>
       </VStack>
       <Goods />
     </div>
