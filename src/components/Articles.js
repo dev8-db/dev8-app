@@ -35,7 +35,7 @@ export default function Articles() {
                 className="w-[100%] md:w-[1/4] overflow-hidden"
             >
                 <CardBody>
-                <Heading size='md' className='text-gray-700 h-[50px] md:h-20'>{article.title}</Heading>
+                <Heading size='md' className='text-gray-700 h-[40%]'>{article.title}</Heading>
                 <Text className='text-gray-500 w-fit-content py-2.5'>
                     {truncateDescription(article.description, 50)}
                 </Text>
