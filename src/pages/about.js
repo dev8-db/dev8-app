@@ -33,7 +33,7 @@ export default function AboutPage() {
         <title>About me -Develop8 Studio</title>
       </Head>
       <VStack className='mb-5'><Heading className="text-gray-700">About me</Heading></VStack>
-      <VStack><Image src="/dog.svg" className="rounded-full w-40" /></VStack>
+      <VStack><Image src="/cheese-profile.png" className="w-28 border-[1px]" /><Text className="text-gray-500">Develop8</Text></VStack>
       <About />
     </div>
   )

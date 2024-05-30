@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    Text, Flex, Box, Icon
+    Text, Flex, Box, Icon, Stack
 } from "@chakra-ui/react";
 import {
     FaLaptopCode,
@@ -10,7 +10,7 @@ import {
 
 export default function About() {
     return (
-        <Flex align="center" className='mb-10'>
+        <Stack align="center" className='mb-10' direction={{ base: "column", md: "row" }}>
         <Box flex="1" textAlign="center" p={8}>
             <Icon as={FaLaptopCode} boxSize={12} color="blue.500" />
             <Text mt={4} fontWeight="bold">フロントエンド</Text>
@@ -28,6 +28,6 @@ export default function About() {
             <Text mt={4} fontWeight="bold">Twitter</Text>
             <Text mt={2}>Twitterに生息しています。リプなどをしてくださったら（学校に行っている時は出来ませんが）秒で反応します。</Text>
         </Box>
-        </Flex>
+        </Stack>
     )
 }
