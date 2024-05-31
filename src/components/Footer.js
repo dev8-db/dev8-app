@@ -17,13 +17,13 @@ export default function Footer() {
             </Stack>
             <Stack align="flex-start">
                 <Heading as="h4" size="md">サポート</Heading>
-                <Link href="#">利用規約</Link>
-                <Link href="#">プライバシーポリシー</Link>
+                <Link href="/terms">利用規約</Link>
+                <Link href="/privacy-policy">プライバシーポリシー</Link>
             </Stack>
             <Stack align="flex-start">
                 <Heading as="h4" size="md">作品</Heading>
-                <Link href="#writings">執筆記事</Link>
-                <Link href="#products">プロダクト</Link>
+                <Link href="/writings">執筆記事</Link>
+                <Link href="/#products">プロダクト</Link>
             </Stack>
             <Stack align="flex-start">
                 <Heading as="h4" size="md">フォローする</Heading>

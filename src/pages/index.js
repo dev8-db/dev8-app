@@ -16,7 +16,7 @@ export default function IndexPage() {
         </Text>
       </VStack>
       <VStack className='mb-10' textAlign="left" id='articles'>
-        <Heading lineHeight="tall" className='text-gray-700 w-[90%] md:w-[75%]'>Articles on <span className='text-blue-500'>Zenn</span></Heading>
+        <Heading lineHeight="tall" className='text-gray-700 w-[90%] md:w-[75%]'>Articles on Zenn</Heading>
         <Articles slice="4" des="50" />
         <Link href="/writings" className='my-[5px] hover:underline text-gray-500'>See more...</Link>
       </VStack>
