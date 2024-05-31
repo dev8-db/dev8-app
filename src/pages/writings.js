@@ -11,7 +11,7 @@ export default function Writings() {
                 <title>Writings -Develop8 Studio</title>
             </Head>
             <VStack className='mb-5'><Heading className="text-gray-700">Writings</Heading></VStack>
-            <VStack className='mb-10' textAlign="left" id='articles'>
+            <VStack className='mb-10' textAlign="left">
                 <Articles slice="full" des="50" />
             </VStack>
         </div>
