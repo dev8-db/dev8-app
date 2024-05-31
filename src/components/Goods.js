@@ -14,13 +14,15 @@ export default function Goods() {
                 direction={{ base: 'column', sm: 'row' }}
                 overflow='hidden'
                 variant='outline'
+                shadow="sm"
                 className="w-[90%] md:w-[75%]"
                 >
                 <Image
                     objectFit='cover'
                     maxW={{ base: '100%', sm: '200px' }}
                     src='/goods/odan-chat.jpg'
-                    alt='Caffe Latte'
+                    alt=''
+                    loading="lazy"
                 />
                 <Stack>
                     <CardBody>
