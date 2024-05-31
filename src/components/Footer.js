@@ -1,29 +1,42 @@
-import { Box, Flex, Text, VStack, Stack, Image, Heading } from "@chakra-ui/react";
-import Link from "next/link";
+import { Box, Container, Stack, Text, Link, SimpleGrid, Heading } from '@chakra-ui/react'
 
 export default function Footer() {
     return (
-        <Box bg="gray.100" className="py-5 px-5 mt-[75px]">
-        <Flex className="w-[90%] md:max-w-[1200px] mx-auto flex justify-between items-center flex-col md:flex-row text-center md:text-left">
-            <VStack spacing={2.5} align={["center", "center", "flex-start"]} className="mb-5 md:mb-0">
-                <Heading letterSpacing="5" fontSize={{ base: '2xl', md: 'xl' }}>
-                    <Link href="/">🐱🍡🐶</Link>
-                </Heading>
-                <Text className="text-sm text-gray-600">&copy; 2024 Develop8 Studio. All rights reserved.</Text>
-            </VStack>
-            <Stack direction="row" spacing={[2.5, 5, 10]} align="flex-start" className="flex-col md:flex-row">
-                <VStack align={["flex-start"]}>
-                    <Link href="/about" className="text-gray-500 hover:underline"><Text>About</Text></Link>
-                    <Link href="/writings" className="text-gray-500 hover:underline"><Text>Writings</Text></Link>
-                    <Link href="/contact" className="text-gray-500 hover:underline"><Text>Contact</Text></Link>
-                </VStack>
-                <VStack align="flex-start">
-                    <Link href="/" className="text-gray-500 hover:underline"><Text>Privacy Policy</Text></Link>
-                    <Link href="/" className="text-gray-500 hover:underline"><Text>Terms of Service</Text></Link>
-                    <Link href="/" className="text-gray-500 hover:underline"><Text>Support</Text></Link>
-                </VStack>
+        <Box
+        bg="gray.900"
+        color="white"
+        py={10}
+        className='mt-32'
+        >
+        <Container maxW="container.lg">
+            <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
+            <Stack align="flex-start">
+                <Heading as="h4" size="md">私について</Heading>
+                <Link href="/about">プロフィール</Link>
+                <Link href="/notices">お知らせ</Link>
+                <Link href="/contact">お問い合わせ</Link>
             </Stack>
-        </Flex>
+            <Stack align="flex-start">
+                <Heading as="h4" size="md">サポート</Heading>
+                <Link href="#">利用規約</Link>
+                <Link href="#">プライバシーポリシー</Link>
+            </Stack>
+            <Stack align="flex-start">
+                <Heading as="h4" size="md">作品</Heading>
+                <Link href="#writings">執筆記事</Link>
+                <Link href="#products">プロダクト</Link>
+            </Stack>
+            <Stack align="flex-start">
+                <Heading as="h4" size="md">フォローする</Heading>
+                <Link href="https://github.com/develop8-studio">GitHub</Link>
+                <Link href="https://x.com/develop8_studio">Twitter</Link>
+                <Link href="https://zenn.dev/dev8">Zenn</Link>
+            </Stack>
+            </SimpleGrid>
+            <Stack direction={{ base: 'column', md: 'row' }} spacing={4} justify="space-between" align="center" mt={10}>
+            <Text>&copy; {new Date().getFullYear()} Develop8 Studio. All rights reserved.</Text>
+            </Stack>
+        </Container>
         </Box>
-    );
-};
+    )
+}
