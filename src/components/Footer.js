@@ -12,7 +12,6 @@ export default function Footer() {
             <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
             <Stack align="flex-start">
                 <Heading as="h4" size="md">私について</Heading>
-                <Link href="/about">プロフィール</Link>
                 <Link href="/notices">お知らせ</Link>
                 <Link href="/contact">お問い合わせ</Link>
             </Stack>
