@@ -6,7 +6,7 @@ export default function Footer() {
         bg="gray.900"
         color="white"
         py={10}
-        className='mt-32'
+        className='mt-[130px]'
         >
         <Container maxW="container.lg">
             <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>

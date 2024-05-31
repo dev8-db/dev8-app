@@ -4,6 +4,7 @@ import {
 } from "@chakra-ui/react";
 import Articles from "@/components/Articles";
 import Goods from "@/components/Goods";
+import Link from "next/link";
 
 export default function IndexPage() {
   return (
@@ -16,7 +17,8 @@ export default function IndexPage() {
       </VStack>
       <VStack className='mb-10' textAlign="left" id='articles'>
         <Heading lineHeight="tall" className='text-gray-700 w-[90%] md:w-[75%]'>Articles on <span className='text-blue-500'>Zenn</span></Heading>
-        <Articles />
+        <Articles slice="4" des="50" />
+        <Link href="/writings" className='my-[5px] hover:underline text-gray-500'>See more...</Link>
       </VStack>
       <VStack className='mb-10' textAlign="right" id='products'>
         <Heading lineHeight="tall" className='text-gray-700 w-[90%] md:w-[75%]'>Goods</Heading>
