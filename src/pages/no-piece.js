@@ -32,8 +32,7 @@ export default function AboutPage() {
       <Head>
         <title>About me -Develop8 Studio</title>
       </Head>
-      <VStack className='mb-5'><Heading className="text-gray-700">About me</Heading></VStack>
-      <VStack><Image src="/cheese-profile.png" className="w-28 border-[1px]" /><Text className="text-gray-500">Develop8</Text></VStack>
+      <VStack><Image src="/dog.svg" className="w-40 rounded-full" /><Text className="text-gray-500">Develop8</Text></VStack>
       <About />
     </div>
   )

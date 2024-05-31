@@ -56,9 +56,6 @@ export default function Header() {
                     justifyContent="flex-end"
                     mt={{ base: 5, md: 0 }}
                 >
-                    <Link mx={2} className="text-gray-600" href="/about">
-                        About
-                    </Link>
                     <Link mx={2} className="text-gray-600 ml-5" href="/notices">
                         Notices
                     </Link>
@@ -81,9 +78,6 @@ export default function Header() {
             </Flex>
             {isOpen && (
                 <Box display={{ base: 'flex', md: 'none' }} flexDirection="column" p={5}>
-                    <Link py={2} className="text-gray-600 py-[10px] px-[15px] hover:bg-gray-100 rounded-lg" href="/about">
-                        About
-                    </Link>
                     <Link py={2} className="text-gray-600 py-[10px] px-[15px] hover:bg-gray-100 rounded-lg" href="/notices">
                         Notices
                     </Link>
